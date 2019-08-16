@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+	"math"
+)
 
 func main() {
 	// a := []int{5, 4, 3, 2, 1}
@@ -28,10 +32,24 @@ func main() {
 	// for key, value := range m {
 	// 	fmt.Println("key", key, "value:", value)
 	// }
-	result := sum(2, 3)
-	fmt.Println(result)
+	// 	result := sum(2, 3)
+	// 	fmt.Println(result)
+	// }
+	// func sum(x int, y int) int {
+	// 	return x + y
+
+	result, err := sqrt(16)
+
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(result)
+	}
 }
-func sum(x int, y int) int {
-	return x + y
+func sqrt(x float64) (float64, error) {
+	if x < 0 {
+		return 0, errors.New("Undefinded for negative numbers")
+	}
+	return math.Sqrt(x), nil
 
 }
