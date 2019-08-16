@@ -19,7 +19,15 @@ func main() {
 
 	// fmt.Println(vertices)
 
-	for i := 0; i < 5; i++ {
-		fmt.Println(i)
+	// for i := 0; i < 5; i++ {
+	// 	fmt.Println(i)
+	// }
+
+	m := make(map[string]string)
+	m["a"] = "alpha"
+	m["b"] = "beta"
+
+	for key, value := range m {
+		fmt.Println("key", key, "value:", value)
 	}
 }
