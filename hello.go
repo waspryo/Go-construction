@@ -5,8 +5,6 @@ import (
 )
 
 func main() {
-	x := 5
-	y := 5
-	sum := x + y
-	fmt.Println(sum)
+	var a [5]int
+	fmt.Println(a)
 }
