@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 	// a := []int{5, 4, 3, 2, 1}
@@ -23,11 +21,17 @@ func main() {
 	// 	fmt.Println(i)
 	// }
 
-	m := make(map[string]string)
-	m["a"] = "alpha"
-	m["b"] = "beta"
+	// m := make(map[string]string)
+	// m["a"] = "alpha"
+	// m["b"] = "beta"
 
-	for key, value := range m {
-		fmt.Println("key", key, "value:", value)
-	}
+	// for key, value := range m {
+	// 	fmt.Println("key", key, "value:", value)
+	// }
+	result := sum(2, 3)
+	fmt.Println(result)
+}
+func sum(x int, y int) int {
+	return x + y
+
 }
